@@ -12,6 +12,6 @@ export class Recipe {
   }
 }
 
-/* Use the class structure definition imported to create
-  each recipe object in app-recipe-list
+/* Use the class definition imported in app-recipe-list
+  to create each recipe object
 */

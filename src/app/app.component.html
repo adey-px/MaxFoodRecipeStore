@@ -1,20 +1,27 @@
-<!--  -->
+<!---------------- main app template -------------->
 
 <!-- optional style -->
 <style></style>
 
 
 <!-- template section -->
-<app-header></app-header>
+<app-header (whenClick)="onNavigate($event)"></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe-list></app-recipe-list>
+      <app-recipes *ngIf="pageLoad === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="pageLoad !== 'recipes'"></app-shopping-list>
     </div>
   </div>
 </div>
 
 
-<!--  optional script -->
+<!-- optional script -->
 <script></script>
+
+
+<!-- NB:
+  ($event) allows listen to clickEvent in header for navigation
+  Add onNavigate in app.comp.ts
+-->
