@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Recipe } from '../recipes/recipes.model';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Recipe } from '../recipes-page/recipes-page.model';
 
 @Component({
   selector: 'app-recipe-item',
@@ -10,9 +10,17 @@ import { Recipe } from '../recipes/recipes.model';
 //
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
+
+  //
+  @Output() recipeSelected = new EventEmitter<void>();
+
+  recipeSelectHandler() {
+    this.recipeSelected.emit()
+  }
 }
 
 
 /* NB:
-  @Input allows binding of even from outside this comp
+  @Input allows binding of event from outside this file
+  @Output allows listen to even from outside
 */

@@ -10,11 +10,12 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <app-recipe-item *ngFor="let item of recipes" [recipe]="item"></app-recipe-item>
+    <app-recipe-item *ngFor="let item of recipes" [recipe]="item"
+      (recipeSelected)="onRecipeSelect(item)"></app-recipe-item>
   </div>
 </div>
 
 
 <!--
   [recipe] refers to recipe in recipe-item.ts
- -->
+-->
