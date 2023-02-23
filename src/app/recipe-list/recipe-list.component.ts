@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Recipe } from '../recipes-page/recipes-page.model';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Recipe } from '../recipes-page/recipes.model';
+import { RecipeService } from '../recipes-page/recipes.service';
 
 
 @Component({
@@ -8,17 +9,20 @@ import { Recipe } from '../recipes-page/recipes-page.model';
   styleUrls: ['./recipe-list.component.css']
 })
 
-// Array of recipe obj from recipe model
-export class RecipeListComponent {
-  recipes: Recipe[] = [
-    new Recipe('Recipe 1', 'Jollof rice super recipe', 'https://hips.hearstapps.com/hmg-prod/images/delish-200114-baked-avocado-boats-0361-landscape-pflo-jpg-1647890967.jpg' ),
-
-    new Recipe('Recipe 2', 'Yam porridge recipe', 'https://hips.hearstapps.com/hmg-prod/images/delish-200114-baked-avocado-boats-0361-landscape-pflo-jpg-1647890967.jpg' )
-  ];
-  //
+// Recipe objects/instances from recipe model
+export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
+  recipes: Recipe[];
 
- onRecipeSelect(recipe: Recipe) {
+  constructor(private recipeService: RecipeService) {
+  }
+
+  /* get recipe objects from service data */
+  ngOnInit() {
+    this.recipes = this.recipeService.getRecipes()
+  }
+
+  onRecipeSelect(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
   }
 }
