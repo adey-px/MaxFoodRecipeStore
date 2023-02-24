@@ -13,11 +13,11 @@ import { RecipeService } from '../recipes-page/recipes.service';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
 
-  constructor(private recipeService: RecipeService) {
+  constructor(private newService: RecipeService) {
   }
 
   /* recipe objects from service data */
   ngOnInit() {
-    this.recipes = this.recipeService.getRecipes()
+    this.recipes = this.newService.getRecipes()
   }
 }

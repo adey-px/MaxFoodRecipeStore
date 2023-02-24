@@ -30,8 +30,8 @@ import { ShoppingService } from './shopping-list/shopping.service';
     BrowserModule,
     FormsModule
   ],
+  bootstrap: [AppComponent],
   providers: [ShoppingService],
-  bootstrap: [AppComponent]
 })
 
 //

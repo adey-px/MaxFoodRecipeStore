@@ -12,10 +12,10 @@ import { RecipeService } from '../recipes-page/recipes.service';
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
 
-  constructor(private recipeService: RecipeService) {}
+  constructor(private newService: RecipeService) {}
 
   recipeSelectHandler() {
-    this.recipeService.singleRecipe.emit(this.recipe);
+    this.newService.singleRecipe.emit(this.recipe);
   }
 }
 
