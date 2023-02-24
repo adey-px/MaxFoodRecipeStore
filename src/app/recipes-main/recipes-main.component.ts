@@ -3,14 +3,14 @@ import { Recipe } from './recipes.model';
 import { RecipeService } from './recipes.service';
 
 @Component({
-  selector: 'app-recipes-page',
-  templateUrl: './recipes-page.component.html',
-  styleUrls: ['./recipes-page.component.css'],
+  selector: 'app-recipes-main',
+  templateUrl: './recipes-main.component.html',
+  styleUrls: ['./recipes-main.component.css'],
   providers: [RecipeService],
 })
 
 //
-export class RecipesPageComponent implements OnInit {
+export class RecipesMainComponent implements OnInit {
   selectedRecipe: Recipe;
 
   constructor(private newService: RecipeService) {}

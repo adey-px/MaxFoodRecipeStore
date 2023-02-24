@@ -1,4 +1,3 @@
-
 <!-- optional style -->
 <style></style>
 
@@ -9,7 +8,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes-page *ngIf="pageLoad === 'recipes'"></app-recipes-page>
+      <app-recipes-main *ngIf="pageLoad === 'recipes'"></app-recipes-main>
       <app-shopping-list *ngIf="pageLoad !== 'recipes'"></app-shopping-list>
     </div>
   </div>

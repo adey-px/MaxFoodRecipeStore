@@ -8,7 +8,7 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { RecipesPageComponent } from './recipes-page/recipes-page.component';
+import { RecipesMainComponent } from './recipes-main/recipes-main.component';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './common/dropdown.directive';
 import { ShoppingService } from './shopping-list/shopping.service';
@@ -21,7 +21,7 @@ import { ShoppingService } from './shopping-list/shopping.service';
     RecipeItemComponent,
     RecipeListComponent,
     RecipeDetailComponent,
-    RecipesPageComponent,
+    RecipesMainComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
