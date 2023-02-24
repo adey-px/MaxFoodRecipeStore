@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesPageComponent } from './recipes-page/recipes-page.component';
 import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './common/dropdown.directive';
+import { ShoppingService } from './shopping-list/shopping.service';
 
 //
 @NgModule({
@@ -29,7 +30,7 @@ import { DropdownDirective } from './common/dropdown.directive';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 

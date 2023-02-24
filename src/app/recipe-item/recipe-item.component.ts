@@ -1,26 +1,25 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Recipe } from '../recipes-page/recipes.model';
+import { RecipeService } from '../recipes-page/recipes.service';
 
 @Component({
   selector: 'app-recipe-item',
   templateUrl: './recipe-item.component.html',
-  styleUrls: ['./recipe-item.component.css']
+  styleUrls: ['./recipe-item.component.css'],
 })
 
-//
+// recipe item
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
 
-  //
-  @Output() recipeSelected = new EventEmitter<void>();
+  constructor(private recipeService: RecipeService) {}
 
   recipeSelectHandler() {
-    this.recipeSelected.emit()
+    this.recipeService.singleRecipe.emit(this.recipe);
   }
 }
 
-
-/* NB:
-  @Input allows binding of event from outside this file
-  @Output allows listen to even from outside
+/*
+@Input allows binding of event from outside this file
+@Output allows listen to even from outside
 */

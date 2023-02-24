@@ -1,7 +1,10 @@
+import {EventEmitter} from '@angular/core';
 import { Recipe } from "./recipes.model";
 
 // Recipe service from recipe-list
 export class RecipeService {
+  singleRecipe = new EventEmitter<Recipe>();
+
     private recipes: Recipe[] = [
     new Recipe('Recipe One', 'Jollof rice super recipe', 'https://hips.hearstapps.com/hmg-prod/images/delish-200114-baked-avocado-boats-0361-landscape-pflo-jpg-1647890967.jpg' ),
 
