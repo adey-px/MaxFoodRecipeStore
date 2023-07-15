@@ -1,2 +1,2 @@
-###
-Food Recipe Shop app built with entirely with Angular and Bootstrap 3 for the UI.
+### Food Recipe Shop 
+- Built with Angular framework, Bootstrap, HTML and vanilla CSS
